@@ -165,7 +165,6 @@ export function IpeRoxoGlobe({ className }: { className?: string }) {
             key={m.id}
             style={{
               position: "absolute",
-              // @ts-expect-error — CSS Anchor Positioning
               positionAnchor: `--cobe-${m.id}`,
               bottom: "anchor(top)",
               left: "anchor(center)",
@@ -184,7 +183,7 @@ export function IpeRoxoGlobe({ className }: { className?: string }) {
               filter: `blur(calc((1 - var(--cobe-visible-${m.id}, 0)) * 8px))`,
               transition: "opacity 0.8s, filter 0.8s",
               zIndex: 10,
-            }}
+            }as React.CSSProperties}
           >
             {m.label}
             <span
