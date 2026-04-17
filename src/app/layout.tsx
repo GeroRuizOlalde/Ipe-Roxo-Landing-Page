@@ -14,6 +14,11 @@ const zain = Zain({
 export const metadata: Metadata = {
   title: "IPE ROXO S.A. | Water & Mining Technology",
   description: "Soluciones de alto rendimiento en Water & Mining Technology.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
