@@ -32,6 +32,11 @@ export function FadeIn({
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
 
+    // Si el elemento ya está visible en el viewport al cargar JS (contenido above-the-fold),
+    // no lo ocultamos: evita que Chrome re-mida el LCP cuando el elemento reaparece.
+    const { top, bottom } = el.getBoundingClientRect()
+    if (top < window.innerHeight && bottom > 0) return
+
     el.style.opacity = "0"
     el.style.transform = INITIAL_TRANSFORM[direction]
     el.style.transition = `opacity 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s, transform 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s`
