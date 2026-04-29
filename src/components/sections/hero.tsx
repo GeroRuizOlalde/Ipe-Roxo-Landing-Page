@@ -1,19 +1,7 @@
-"use client"
-
-import dynamic from "next/dynamic"
 import Link from "next/link"
 import { ArrowRight, Droplets } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
-
-const IpeRoxoGlobe = dynamic(
-  () => import("@/components/ui/globe").then((m) => m.IpeRoxoGlobe),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="w-full max-w-[550px] aspect-square rounded-full bg-brand-blue/5 animate-pulse" />
-    ),
-  }
-)
+import { GlobeClient } from "@/components/ui/globe-client"
 
 export function HeroSection() {
   return (
@@ -67,7 +55,7 @@ export function HeroSection() {
             
             {/* Nuestro globo COBE flotando */}
             <div className="relative z-10 w-full max-w-[550px] p-4 lg:p-0">
-              <IpeRoxoGlobe />
+              <GlobeClient />
             </div>
             
           </FadeIn>

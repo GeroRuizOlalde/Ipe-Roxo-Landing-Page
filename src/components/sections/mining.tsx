@@ -1,17 +1,5 @@
-"use client"
-
-import dynamic from "next/dynamic"
 import { FadeIn } from "@/components/ui/fade-in"
-
-const RiverMiningMap = dynamic(
-  () => import("@/components/ui/rivermap").then((m) => m.RiverMiningMap),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="absolute inset-0 w-full h-full bg-brand-white/5 rounded-3xl animate-pulse" />
-    ),
-  }
-)
+import { RiverMiningMapClient } from "@/components/ui/rivermap-client"
 
 export function MiningSection() {
   const stats = [
@@ -47,7 +35,7 @@ export function MiningSection() {
           </FadeIn>
 
           <FadeIn direction="up" delay={0.2} className="relative aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden border border-brand-white/10">
-            <RiverMiningMap className="absolute inset-0 w-full h-full" />
+            <RiverMiningMapClient className="absolute inset-0 w-full h-full" />
           </FadeIn>
 
         </div>
