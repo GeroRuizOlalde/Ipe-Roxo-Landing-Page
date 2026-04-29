@@ -42,12 +42,11 @@ export function HeroSection() {
             </div>
           </FadeIn>
 
-          {/* Contenido Visual (Globo Terráqueo Flotante) */}
-          <FadeIn 
-            direction="up" 
-            delay={0.3} 
-            // Limpiamos los bordes, fondos y sombras. Dejamos solo la estructura de posicionamiento.
-            className="relative w-full aspect-square lg:aspect-[4/3] flex items-center justify-center"
+          {/* Globo: solo en desktop — en mobile el cálculo WebGL destruye el TBT */}
+          <FadeIn
+            direction="up"
+            delay={0.3}
+            className="relative hidden lg:flex w-full lg:aspect-[4/3] items-center justify-center"
           >
             
             {/* Destello sutil de fondo para darle aura y profundidad al mundo */}
