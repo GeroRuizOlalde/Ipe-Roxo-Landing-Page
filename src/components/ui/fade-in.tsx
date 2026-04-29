@@ -30,6 +30,8 @@ export function FadeIn({
     const el = ref.current
     if (!el) return
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+
     el.style.opacity = "0"
     el.style.transform = INITIAL_TRANSFORM[direction]
     el.style.transition = `opacity 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s, transform 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s`

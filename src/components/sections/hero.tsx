@@ -1,7 +1,17 @@
+import dynamic from "next/dynamic"
 import Link from "next/link"
 import { ArrowRight, Droplets } from "lucide-react"
 import { FadeIn } from "@/components/ui/fade-in"
-import { IpeRoxoGlobe } from "@/components/ui/globe"
+
+const IpeRoxoGlobe = dynamic(
+  () => import("@/components/ui/globe").then((m) => m.IpeRoxoGlobe),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full max-w-[550px] aspect-square rounded-full bg-brand-blue/5 animate-pulse" />
+    ),
+  }
+)
 
 export function HeroSection() {
   return (
