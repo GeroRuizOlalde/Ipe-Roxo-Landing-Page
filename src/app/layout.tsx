@@ -4,9 +4,9 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SmoothScroll } from "@/components/ui/smooth-scroll"; // <-- Importamos nuestro nuevo superpoder
 
-const zain = Zain({ 
+const zain = Zain({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "700", "800", "900"],
+  weight: ["300", "400", "700", "800"],
   variable: "--font-zain",
   display: "swap",
 });
@@ -17,7 +17,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
   },
 };
 

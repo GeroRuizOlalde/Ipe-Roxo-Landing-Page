@@ -1,7 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { ReactNode } from "react"
+import { useEffect, useRef, ReactNode } from "react"
 import { cn } from "@/lib/utils"
 
 interface FadeInProps {
@@ -11,43 +10,47 @@ interface FadeInProps {
   className?: string
 }
 
-export function FadeIn({ 
-  children, 
-  delay = 0, 
-  direction = "up", 
-  className 
+const INITIAL_TRANSFORM: Record<NonNullable<FadeInProps["direction"]>, string> = {
+  up: "translateY(40px)",
+  down: "translateY(-40px)",
+  left: "translateX(40px)",
+  right: "translateX(-40px)",
+  none: "translateY(0)",
+}
+
+export function FadeIn({
+  children,
+  delay = 0,
+  direction = "up",
+  className,
 }: FadeInProps) {
-  
-  // Definimos de dónde arranca la animación según la dirección
-  const directions = {
-    up: { y: 40, x: 0 },
-    down: { y: -40, x: 0 },
-    left: { x: 40, y: 0 },
-    right: { x: -40, y: 0 },
-    none: { x: 0, y: 0 }
-  }
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    el.style.opacity = "0"
+    el.style.transform = INITIAL_TRANSFORM[direction]
+    el.style.transition = `opacity 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s, transform 0.7s cubic-bezier(0.21, 0.47, 0.32, 0.98) ${delay}s`
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.opacity = "1"
+          el.style.transform = "none"
+          observer.disconnect()
+        }
+      },
+      { rootMargin: "-100px" }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [delay, direction])
 
   return (
-    <motion.div
-      initial={{ 
-        opacity: 0, 
-        ...directions[direction] 
-      }}
-      whileInView={{ 
-        opacity: 1, 
-        x: 0, 
-        y: 0 
-      }}
-      // margin: "-100px" hace que espere a que el elemento entre un poco más en pantalla para arrancar
-      viewport={{ once: true, margin: "-100px" }} 
-      transition={{
-        duration: 0.7,
-        delay: delay,
-        ease: [0.21, 0.47, 0.32, 0.98] // Una curva de aceleración bien suave y ejecutiva
-      }}
-      className={cn(className)}
-    >
+    <div ref={ref} className={cn(className)}>
       {children}
-    </motion.div>
+    </div>
   )
 }

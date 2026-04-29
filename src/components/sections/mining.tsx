@@ -1,5 +1,15 @@
+import dynamic from "next/dynamic"
 import { FadeIn } from "@/components/ui/fade-in"
-import { RiverMiningMap } from "@/components/ui/rivermap"
+
+const RiverMiningMap = dynamic(
+  () => import("@/components/ui/rivermap").then((m) => m.RiverMiningMap),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="absolute inset-0 w-full h-full bg-brand-white/5 rounded-3xl animate-pulse" />
+    ),
+  }
+)
 
 export function MiningSection() {
   const stats = [

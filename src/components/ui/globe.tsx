@@ -69,18 +69,19 @@ export function IpeRoxoGlobe({ className }: { className?: string }) {
 
     const canvas = canvasRef.current
     const width = canvas.offsetWidth
+    const dpr = Math.min(window.devicePixelRatio, 2)
 
     const globe = createGlobe(canvas, {
-      devicePixelRatio: 2,
-      width: width * 2,
-      height: width * 2,
+      devicePixelRatio: dpr,
+      width: width * dpr,
+      height: width * dpr,
       phi: phiRef.current,
       theta: -0.2,
 
       // Globo blanco con continentes visibles
       dark: 0,
       diffuse: 1.2,
-      mapSamples: 16000,
+      mapSamples: 8000,
       mapBrightness: 6,
       mapBaseBrightness: 0.05,
       baseColor: [1, 1, 1],
@@ -124,8 +125,8 @@ export function IpeRoxoGlobe({ className }: { className?: string }) {
     const onResize = () => {
       const w = canvas.offsetWidth
       globe.update({
-        width: w * 2,
-        height: w * 2,
+        width: w * dpr,
+        height: w * dpr,
       })
     }
     window.addEventListener("resize", onResize)
