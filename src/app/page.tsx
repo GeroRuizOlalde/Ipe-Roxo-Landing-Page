@@ -5,6 +5,7 @@ import { TrustBar } from "@/components/sections/trust-bar"
 import { ProblemSection } from "@/components/sections/problem"
 import { SolutionsSection } from "@/components/sections/solutions"
 import { MiningSection } from "@/components/sections/mining"
+import { SustainabilitySection } from "@/components/sections/sustainability"
 import { ProcessSection } from "@/components/sections/process"
 import { WhyIpeRoxoSection } from "@/components/sections/why-ipe-roxo"
 import { ContactSection } from "@/components/sections/contact"
@@ -20,6 +21,7 @@ export default function Home() {
         <ProblemSection />
         <SolutionsSection />
         <MiningSection />
+        <SustainabilitySection />
         <ProcessSection />
         <WhyIpeRoxoSection />
         <ContactSection />

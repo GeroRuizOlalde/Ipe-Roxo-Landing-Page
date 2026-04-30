@@ -4,8 +4,8 @@ import { RiverMiningMapClient } from "@/components/ui/rivermap-client"
 export function MiningSection() {
   const stats = [
     { value: "40%", label: "Reducción en consumo de agua" },
-    { value: "99.9%", label: "Uptime operativo" },
-    { value: "ISO", label: "Estándares internacionales" },
+    { value: "99.9%", label: "Disponibilidad operativa(uptime)" },
+    { value: "ISO", label: "Cumplimiento con estándares internacionales(ISO y Normativa ambiental aplicable)" },
   ]
 
   return (
@@ -21,7 +21,7 @@ export function MiningSection() {
               <span className="text-brand-green">Sostenible.</span>
             </h2>
             <p className="text-xl text-brand-white/70 font-light mb-10 leading-relaxed max-w-lg">
-              La rentabilidad no debe comprometer el futuro. Implementamos tecnología que optimiza la extracción mientras protege el entorno, alineando tus operaciones con las exigencias medioambientales globales.
+              La rentabilidad y la sustentabilidad deben avanzar en conjunto. Implementamos soluciones tecnológicas que optimizan el uso del agua, mejoran la eficiencia de los procesos y reducen el impacto ambiental, alineando las operaciones con los estándares internacionales más exigentes.
             </p>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 border-t border-brand-white/10 pt-10">

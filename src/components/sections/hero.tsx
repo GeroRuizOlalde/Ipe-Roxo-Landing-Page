@@ -18,11 +18,12 @@ export function HeroSection() {
             
             <h1 className="text-5xl lg:text-7xl font-bold text-brand-black leading-[1.1] mb-6 tracking-tight">
               Transformando el futuro de <br/>
-              <span className="text-brand-blue">Water & Mining.</span>
+              <span className="text-brand-blue">Water Technology & Solutions.</span>
             </h1>
             
             <p className="text-xl lg:text-2xl text-brand-black/70 font-light mb-8 max-w-lg leading-relaxed">
-              Soluciones de ingeniería escalables y tecnología de precisión para optimizar tus operaciones con solidez industrial.
+              Soluciones inteligentes y sustentables para el agua en minería e industria.
+Integramos ingeniería y tecnología para maximizar la eficiencia hídrica, minimizar la huella hídrica y avanzar hacia modelos de reutilización y economía circular del agua a escala industrial.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

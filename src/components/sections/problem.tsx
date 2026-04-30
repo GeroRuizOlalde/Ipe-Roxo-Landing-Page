@@ -5,18 +5,18 @@ export function ProblemSection() {
   const problems = [
     {
       icon: <TrendingDown size={32} className="text-brand-blue" />,
-      title: "Costos operativos fuera de control",
-      description: "La falta de optimización en el uso de recursos hídricos y procesos de extracción genera mermas invisibles que impactan directo en la rentabilidad."
+      title: "Costos operativos crecientes",
+      description: "La gestión ineficiente del recurso hídrico en procesos de extracción e industrialización genera pérdidas operativas, sobreconsumo de energía y mayores costos de tratamiento, impactando directamente en la rentabilidad."
     },
     {
       icon: <AlertCircle size={32} className="text-brand-blue" />,
-      title: "Riesgos de cumplimiento normativo",
-      description: "Las regulaciones ambientales son cada vez más estrictas. Operar con tecnología obsoleta expone a la empresa a multas y frenos operativos."
+      title: "Exigencias regulatorias en aumento",
+      description: "Los marcos normativos ambientales son cada vez más estrictos y demandan mayor control y trazabilidad. Sistemas de tratamiento desactualizados comprometen el cumplimiento, elevando el riesgo de sanciones y paradas operativas."
     },
     {
       icon: <Settings2 size={32} className="text-brand-blue" />,
-      title: "Infraestructura poco escalable",
-      description: "Sistemas heredados que no se comunican entre sí, dificultando la toma de decisiones en tiempo real y frenando la expansión a nuevos yacimientos."
+      title: "Infraestructura no preparada para escalar",
+      description: "Sistemas aislados y tecnologías no integradas limitan la visibilidad operativa y dificultan la toma de decisiones en tiempo real, restringiendo la capacidad de expandir y optimizar las operaciones."
     }
   ]
 
@@ -27,10 +27,10 @@ export function ProblemSection() {
         <FadeIn direction="up">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-brand-black mb-6 leading-tight tracking-tight">
-              Los desafíos tradicionales exigen <span className="text-brand-blue">respuestas de alto rendimiento</span>
+              Los desafíos actuales exigen <span className="text-brand-blue">soluciones de alto rendimiento</span>
             </h2>
             <p className="text-xl text-brand-black/60 font-light leading-relaxed">
-              La industria Water & Mining enfrenta una presión sin precedentes. Seguir operando con los estándares de ayer ya no es una opción viable.
+              La industria en general y la minera en particular, enfrentan un desafío sobre la gestión del agua: mayor exigencia regulatoria, escasez del recurso y necesidad de optimizar costos y continuidad operativa. Operar con estándares del pasado ya no es viable.
             </p>
           </div>
         </FadeIn>

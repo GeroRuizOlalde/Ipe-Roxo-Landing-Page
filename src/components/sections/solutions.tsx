@@ -6,19 +6,19 @@ export function SolutionsSection() {
   const solutions = [
     {
       title: "Gestión Inteligente de Agua",
-      description: "Sistemas avanzados para el tratamiento, recirculación y monitoreo de recursos hídricos, garantizando eficiencia y cumplimiento normativo.",
+      description: "Diseñamos e integramos sistemas para el tratamiento, reutilización y monitoreo en tiempo real de recursos hídricos, optimizando la eficiencia operativa y asegurando el cumplimiento normativo.",
       icon: <Droplet size={40} className="text-brand-blue" />,
       tag: "Water Technology"
     },
     {
-      title: "Tecnología de Extracción",
-      description: "Equipamiento y procesos optimizados para maximizar el rendimiento en yacimientos, reduciendo costos operativos y minimizando el impacto ambiental.",
+      title: "Eficiencia operativa en cada etapa del proceso",
+      description: "Desarrollamos soluciones que integran tratamiento de agua y optimización de procesos para mejorar la productividad, reducir la huella hídrica y asegurar operaciones más sustentables.",
       icon: <Pickaxe size={40} className="text-brand-blue" />,
       tag: "Mining Technology"
     },
     {
-      title: "Automatización Industrial",
-      description: "Integración de sensores IoT y software de control en tiempo real para una toma de decisiones basada en datos concretos y precisos.",
+      title: "Automatización y control en tiempo real",
+      description: "Implementamos soluciones de instrumentación, IoT industrial y software de control que permiten capturar, procesar y analizar datos en línea, optimizando el desempeño y la estabilidad de los procesos.",
       icon: <Cpu size={40} className="text-brand-blue" />,
       tag: "Innovation"
     }
