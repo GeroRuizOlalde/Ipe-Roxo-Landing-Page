@@ -21,7 +21,7 @@ export function Footer() {
             </Link>
             <p className="text-brand-white/60 font-light max-w-md leading-relaxed mb-6">
               Desarrollamos e implementamos tecnologia de alto rendimiento para el sector
-              Water &amp; Mining, priorizando la rentabilidad y la sustentabilidad operativa.
+              Water Technology &amp; Solutions, priorizando la rentabilidad y la sustentabilidad operativa.
             </p>
           </div>
 
